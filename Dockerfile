@@ -14,9 +14,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app /app/app
 COPY README.md /app/README.md
 
-EXPOSE 8082
+EXPOSE 8086
 
 # Healthcheck (simple TCP)
-HEALTHCHECK --interval=10s --timeout=3s --retries=5 CMD curl -fsS http://localhost:8082/health || exit 1
+HEALTHCHECK --interval=10s --timeout=3s --retries=5 CMD curl -fsS http://localhost:8086/health || exit 1
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8082"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8086"]
