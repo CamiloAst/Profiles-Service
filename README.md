@@ -4,7 +4,7 @@ Servicio de gestión de **perfiles de usuario** para el proyecto de microservici
 - Lenguaje: Python 3.12 + FastAPI
 - DB: PostgreSQL
 - Mensajería: RabbitMQ (escucha eventos `user.created` y `user.deleted`)
-- Exposición: puerto 8082
+- Exposición: puerto 8086
 - Healthcheck: `GET /health`
 - OpenAPI: `GET /docs` y `GET /openapi.json`
 
